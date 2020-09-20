@@ -13,7 +13,7 @@ class OrgDAO {
 	public static function create ($rol) {
 		$con = new Conn();
 		$con->update("INSERT INTO organizacao (name, cnpj, ie, juridicalType, adress, obs, ended)
-									VALUES ('$rol->name', '$rol->cnpj', '$rol->ie', '$rol->juridicalType', '$rol->adress', '$rol->obs', '$rol->ended')");
+									VALUES ('".$rol->getName()."', '".$rol->getCnpj()."', '".$rol->getIe()."', '".$rol->getJuridicalType()."', '".$rol->getAdress()."', '".$rol->getObs()."', '".$rol->getEnded()."')");
 		$con->close();
 	}
 
@@ -27,8 +27,8 @@ class OrgDAO {
 	public static function update ($rol) {
 		$con = new Conn();
 		$con->update("UPDATE organizacao
-		SET name = '$rol->name', cnpj = '$rol->cnpj', ie = '$rol->ie', juridicalType = '$rol->juridicalType', adress = '$rol->adress', obs = '$rol->obs', ended = '$rol->ended'
-			 						WHERE id = $rol->id");
+		SET name = '".$rol->getName()."', cnpj = '".$rol->getCnpj()."', ie = '".$rol->getIe()."', juridicalType = '".$rol->getJuridicalType()."', adress = '".$rol->getAdress()."', obs = '".$rol->getObs()."', ended = '".$rol->getEnded()."'
+			 						WHERE id = ".$rol->getId()."");
 		$con->close();
 	}
 

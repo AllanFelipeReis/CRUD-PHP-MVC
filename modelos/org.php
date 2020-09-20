@@ -2,14 +2,14 @@
 
 class Org{
 
-    public $id;
-    public $name;
-    public $cnpj;
-    public $ie;
-    public $juridicalType;
-    public $adress;
-    public $obs;
-    public $ended;
+    private $id;
+    private $name;
+    private $cnpj;
+    private $ie;
+    private $juridicalType;
+    private $adress;
+    private $obs;
+    private $ended;
 
     public function construct(){
 			$this->id = 0;
@@ -20,6 +20,31 @@ class Org{
 	    $this->adress = '';
 	    $this->obs = '';
 	    $this->ended = '';
+    }
+
+    public function getId(){
+      return $this->id;
+    }
+    public function getName(){
+        return $this->name;
+    }
+    public function getCnpj(){
+        return $this->cnpj;
+    }
+    public function getIe(){
+        return $this->ie;
+    }
+    public function getJuridicalType(){
+        return $this->juridicalType;
+    }
+    public function getAdress(){
+        return $this->adress;
+    }
+    public function getObs(){
+        return $this->obs;
+    }
+    public function getEnded(){
+        return $this->ended;
     }
 
     public function setId($id){
