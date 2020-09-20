@@ -10,10 +10,10 @@ class OrgDAO {
 		return $cont;
 	}
 
-	public static function create ($rol) {
+	public static function create ($org) {
 		$con = new Conn();
 		$con->update("INSERT INTO organizacao (name, cnpj, ie, juridicalType, adress, obs, ended)
-									VALUES ('".$rol->getName()."', '".$rol->getCnpj()."', '".$rol->getIe()."', '".$rol->getJuridicalType()."', '".$rol->getAdress()."', '".$rol->getObs()."', '".$rol->getEnded()."')");
+									VALUES ('".$org->getName()."', '".$org->getCnpj()."', '".$org->getIe()."', '".$org->getJuridicalType()."', '".$org->getAdress()."', '".$org->getObs()."', '".$org->getEnded()."')");
 		$con->close();
 	}
 
@@ -24,11 +24,11 @@ class OrgDAO {
 		return $cont[0];
 	}
 
-	public static function update ($rol) {
+	public static function update ($org) {
 		$con = new Conn();
 		$con->update("UPDATE organizacao
-		SET name = '".$rol->getName()."', cnpj = '".$rol->getCnpj()."', ie = '".$rol->getIe()."', juridicalType = '".$rol->getJuridicalType()."', adress = '".$rol->getAdress()."', obs = '".$rol->getObs()."', ended = '".$rol->getEnded()."'
-			 						WHERE id = ".$rol->getId()."");
+		SET name = '".$org->getName()."', cnpj = '".$org->getCnpj()."', ie = '".$org->getIe()."', juridicalType = '".$org->getJuridicalType()."', adress = '".$org->getAdress()."', obs = '".$org->getObs()."', ended = '".$org->getEnded()."'
+			 						WHERE id = ".$org->getId()."");
 		$con->close();
 	}
 

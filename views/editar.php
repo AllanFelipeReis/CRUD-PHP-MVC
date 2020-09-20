@@ -44,7 +44,7 @@
 
 					<div class="form-group">
 						<label for="">Observação:</label>
-						<textarea type="text" class="form-control" value="<?=$rol[5]?>" name="obs" placeholder="Observacao" rows="3"></textarea>
+						<textarea type="text" class="form-control" name="obs" placeholder="Observacao" rows="3"><?=$rol[5]?></textarea>
 					</div>
 
 					<div class="form-group">
