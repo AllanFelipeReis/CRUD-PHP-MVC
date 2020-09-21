@@ -5,6 +5,7 @@
 	<meta charset="UTF-8" />
 	<title>Read</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
 </head>
 <body>
 	<div class="container">
@@ -45,9 +46,9 @@
 							<td><?= $value[5] ?></td>
 							<td><?= $value[6] ?></td>
 							<td><?= $value[7] ?></td>
-							<td><a href="editar.php?id=<?=$value[0]?>">Edit</a></td>
+							<td><a href="editar.php?id=<?=$value[0]?>"><i class="fas fa-pen fa-xs"></i></a></td>
 							<td><a href="../controll/controlador.php?method=elim&id=<?=$value[0]?>"
-								onclick="return confirm('Deseja Eliminar a org <?=$value[0]?>?')">Eliminar</a></td>
+								onclick="return confirm('Deseja Eliminar a org <?=$value[0]?>?')"><i class="fas fa-trash fa-xs"></a></td>
 						</tr>
 					<?php } ?>
 				</tr>
