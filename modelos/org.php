@@ -12,7 +12,7 @@ class Org{
     private $ended;
 
     public function construct(){
-			$this->id = 0;
+	    $this->id = 0;
 	    $this->name = '';
 	    $this->cnpj = '';
 	    $this->ie = '';
